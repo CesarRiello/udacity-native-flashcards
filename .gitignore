@@ -19,3 +19,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/var/www/html/udacity-native-flashcards/node_modules
