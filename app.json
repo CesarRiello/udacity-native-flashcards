@@ -1,5 +1,18 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+    "name": "Flash Cards",
+    "slug": "flash-cards",
+    "sdkVersion": "25.0.0",
+    "privacy": "public",
+    "android": { "package": "br.com.czare" },
+    "icon": "./assets/imgs/flashcards.png",
+    "notification": {
+      "icon": "./assets/imgs/flashcards.png",
+      "color": "#ff0000"
+    },
+    "loading": {
+      "icon": "./assets/imgs/flashcards.png",
+      "hideExponentText": false
+    }
   }
 }
