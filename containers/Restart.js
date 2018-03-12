@@ -52,7 +52,7 @@ class Restart extends Component {
     this.props.navigation.dispatch(resetAction)
   }
   componentDidMount() {
-    notifications.clear
+    notifications.clear()
       .then(notifications.add)
   }
   render() {
