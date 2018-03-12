@@ -18,7 +18,7 @@ const Title = styled.Text`
 `
 
 const Count = styled.Text`
-  color: #555;
+  color: ${colors.gray};
   font-size: 18;
   text-align: center;
 `
