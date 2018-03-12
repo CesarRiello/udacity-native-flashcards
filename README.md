@@ -11,18 +11,18 @@ To run this project you need nodejs and npm.
 ### Installing
 
 ```
-npm install
+yarn
 ```
 
 ## Running
 
 ```
-npm start
+yarn start
 ```
 
 ## Authors
 
-***Cesar Riello**
+***Cesar Riello***
 
 ## License
 
