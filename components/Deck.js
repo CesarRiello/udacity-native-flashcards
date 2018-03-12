@@ -1,35 +1,46 @@
 import React from 'react'
-import { View, Text, TouchableNativeFeedback } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
-import * as color from '../utils/color'
+import { colors } from '../services/theme'
 
-const Title = styled.Text`
-  color: ${color.primaryBlack};
-  font-size: 24;
-  text-align: center;
+const Name = styled.Text`
+  color: ${colors.primary};
+  font-size: 25;
+  padding-left: 20;
 `
 
-const Count = styled.Text`
-  color: #555;
-  font-size: 18;
-  text-align: center;
+const Quantity = styled.Text`
+  color: ${colors.gray};
+  font-size: 17;
+  padding-left: 20;
 `
 
 const Wrapper = styled.View`
-  border-color: ${color.primaryBlack};
+  border-color: #ccc;
   border-width: 1;
   border-top-width: 0;
   padding-top: 25;
   padding-bottom:  25;
+  background: #fff;
+
+  shadow-color: #ccc;
+  shadow-opacity: 0.6;
+  shadow-radius: 2;
+  elevation: 1;
+
+  margin-top: 10;
+  margin-left: 10;
+  margin-right: 10;
 `
 
-const Deck = ({children, questions}) => (
-  <TouchableNativeFeedback background={TouchableNativeFeedback.SelectableBackground()}>
+const Deck = props => (
+  <TouchableOpacity
+    {...props}>
     <Wrapper>
-      <Title>{children}</Title>
-      <Count>{questions.length || 0} cards</Count>
+      <Name>{props.children}</Name>
+      <Quantity>Cards quantity ({props.questions.length}) </Quantity>
     </Wrapper>
-  </TouchableNativeFeedback>
-);
+  </TouchableOpacity>
+)
 
 export default Deck;
