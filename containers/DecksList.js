@@ -1,8 +1,6 @@
 import React from 'react';
 import { FlatList, Vibration, Alert } from 'react-native';
-import styled from 'styled-components/native'
 import { decks } from '../services/storage'
-import { colors } from '../services/theme'
 import Deck from '../components/Deck'
 import Loading from '../components/Loading'
 import DeckFirst from '../components/DeckFirst'
@@ -47,8 +45,7 @@ class DecksList extends React.Component {
   renderLoading = () => <Loading />
   render() {
     return !this.props.screenProps.fetchedDecks
-      && this.renderLoading()
-      || this.renderList()
+      && (this.renderLoading() || this.renderList())
   }
 }
 

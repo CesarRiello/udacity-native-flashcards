@@ -32,7 +32,7 @@ export const decks = {
   add: ({title}) => {
     return AsyncStorage.getItem(FLASHCARDS_KEY)
       .then(decks => {
-        deckList = JSON.parse(decks) || []
+        const deckList = JSON.parse(decks) || []
         const deckAdd = {
           title,
           key: uuidv1(),
@@ -46,7 +46,7 @@ export const decks = {
   remove: ({key}) => {
     return AsyncStorage.getItem(FLASHCARDS_KEY)
       .then(decks => {
-        deckList = JSON.parse(decks) || []
+        const deckList = JSON.parse(decks) || []
         const deckAddList = (deckList || [])
           .filter(deck => {
             return deck.key !== key

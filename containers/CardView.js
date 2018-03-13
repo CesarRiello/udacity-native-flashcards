@@ -114,10 +114,10 @@ class CardView extends React.Component {
     })
   }
   render() {
-    const { children, questions, navigation, ...props} = this.props
+    const { navigation } = this.props
     const { item } = navigation.state.params
     const { disableCard, fliped, currentQuestion, score } = this.state
-    console.log('navigation', navigation)
+
     return (
       <Wrapper>
         <Steps>
@@ -144,20 +144,21 @@ class CardView extends React.Component {
         <View style={{justifyContent: 'center', width: '100%'}}>
 
           <TouchableOpacity disabled={disableCard} onPress={() => {this.nextCard(true)}}>
-            <TouchBtn outline disabled={disableCard}>
-              right
+            <TouchBtn disabled={disableCard} color={colors.correct}>
+              Correct
             </TouchBtn>
           </TouchableOpacity>
 
           <TouchableOpacity
             disabled={disableCard}
             onPress={() => {this.nextCard(false)}}>
-            <TouchBtn outline disabled={disableCard}>
-              wrong
+            <TouchBtn disabled={disableCard} color={colors.incorrect}>
+              Incorrect
             </TouchBtn>
           </TouchableOpacity>
 
         </View>
+        <Text>{score}</Text>
       </Wrapper>
       )
   }

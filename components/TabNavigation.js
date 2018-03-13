@@ -13,7 +13,7 @@ const TabNavigation = TabNavigator({
   DeckCreate: {
     screen: DeckCreate,
     navigationOptions: {
-      tabBarLabel: 'Novo Deck',
+      tabBarLabel: 'Create Deck',
     }
   }
 },

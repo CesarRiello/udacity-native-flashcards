@@ -10,11 +10,6 @@ import Loading from '../components/Loading'
 import CardFirst from '../components/CardFirst'
 import TouchBtn from '../components/TouchBtn'
 
-const Wrapper = styled.View`
-  background: #fff;
-  padding-bottom: 40;
-`
-
 const Name = styled.Text`
   margin-top: 30;
   color: ${colors.secondary};
@@ -58,26 +53,19 @@ class Questions extends React.Component {
   componentDidMount() {
     this.refreshDeck()
   }
-  renderLoading = () => {
-    return (
-      <Loading />
-    )
-  }
+  renderLoading = () => <Loading />
   renderQuestions() {
     const item = this.state.item || {}
     const count = (item.questions || []).length || 0
     return item && (
       <View style={{flex: 1}}>
 
-      {count ?
-        (<DeckWrapper key="deck">
+      {count ?(
+        <DeckWrapper key="deck">
           <Name>{item.title || 'No name'}</Name>
           <Quantity>
             Quantity of cards ({count})
           </Quantity>
-
-
-
           <TouchableOpacity
             key="start"
             disabled={!count}
@@ -85,27 +73,25 @@ class Questions extends React.Component {
           >
             <TouchBtn>Start</TouchBtn>
           </TouchableOpacity>
-        </DeckWrapper>)
-      : (<CardFirst />)
+        </DeckWrapper>
+      ) : (
+        <CardFirst />
+      )
       }
-
 
         <TouchableOpacity
           onPress={() => {
             this.props.navigation.navigate('CardCreate', {item, refreshDeck: this.refreshDeck})}}
             >
-
             <TouchBtn outline>Create Card</TouchBtn>
-
         </TouchableOpacity>
 
       </View>
     )
   }
   render() {
-    return !this.props.screenProps.fetchedDecks
-      && this.renderLoading()
-      || this.renderQuestions()
+    return !this.props.screenProps.fetchedDecks &&
+      (this.renderLoading() || this.renderQuestions())
   }
 }
 

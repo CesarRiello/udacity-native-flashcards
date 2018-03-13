@@ -1,9 +1,9 @@
 export const colors = {
-    incorrect: '#ee1100',
-    correct: '#2200ee',
+    incorrect: '#cc0000',
+    correct: '#0000cc',
     feature: '#ff00ee',
-    primary: '#dd2200',
-    secondary: '#3300dd',
+    primary: '#00ffff',
+    secondary: '#33cc00',
     gray: '#777777',
     silver: '#eeeeee',
     light: '#f6f6f6',

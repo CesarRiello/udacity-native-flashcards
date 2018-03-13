@@ -10,32 +10,6 @@ import { colors } from '../services/theme'
 import DefaultInput from '../components/DefaultInput'
 import DefaultLabel from '../components/DefaultLabel'
 
-const Wrapper = styled.View`
-  background: #fff;
-  padding-bottom: 40;
-`
-
-const Title = styled.Text`
-  color: ${colors.secondary};
-  font-size: 26;
-  text-align: center;
-  padding-top: 20;
-  padding-right: 20;
-  padding-bottom: 20;
-  padding-left: 20;
-`
-
-const TextField = styled.TextInput`
-  height: 50;
-  margin-top: 20;
-  margin-right: 20;
-  margin-bottom: 20;
-  margin-left: 20;
-  padding-top: 10;
-  padding-bottom: 10;
-  font-size: 18;
-`
-
 const NewButton = styled.View`
   margin-top: 20;
   margin-right: 20;

@@ -47,6 +47,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
+    this.loadDecks()
     notifications.add()
   }
 
@@ -62,10 +63,6 @@ class Main extends React.Component {
         })
         navigation.dispatch(resetAction)
     })
-  }
-
-  componentDidMount() {
-    this.loadDecks()
   }
 
   render() {
