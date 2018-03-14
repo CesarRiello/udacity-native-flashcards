@@ -44,8 +44,8 @@ class DecksList extends React.Component {
   }
   renderLoading = () => <Loading />
   render() {
-    return !this.props.screenProps.fetchedDecks
-      && (this.renderLoading() || this.renderList())
+    return (!this.props.screenProps.fetchedDecks && this.renderLoading())
+    || this.renderList()
   }
 }
 

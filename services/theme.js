@@ -2,7 +2,7 @@ export const colors = {
     incorrect: '#cc0000',
     correct: '#0000cc',
     feature: '#ff00ee',
-    primary: '#00ffff',
+    primary: '#0099bb',
     secondary: '#33cc00',
     gray: '#777777',
     silver: '#eeeeee',

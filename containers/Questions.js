@@ -90,8 +90,7 @@ class Questions extends React.Component {
     )
   }
   render() {
-    return !this.props.screenProps.fetchedDecks &&
-      (this.renderLoading() || this.renderQuestions())
+    return (!this.props.screenProps.fetchedDecks && this.renderLoading()) || this.renderQuestions()
   }
 }
 

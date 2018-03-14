@@ -40,7 +40,7 @@ const CardBack = styled.View`
 `
 
 const CardText = styled.View`
-  flex: 1
+  flex: 1;
 `
 
 const CardWrapper = styled.View`
@@ -158,7 +158,7 @@ class CardView extends React.Component {
           </TouchableOpacity>
 
         </View>
-        <Text>{score}</Text>
+
       </Wrapper>
       )
   }
